@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — Our Lok'al Kitchen &amp; Coffeehouse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Our Lok'al home">
+      <span class="pre">our</span>
+      <span class="main">Lok'al</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+      <li><a href="contact.html">Visit</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-top">
+    <a class="logo" href="index.html"><span class="pre">our</span><span class="main">Lok'al</span></a>
+    <button class="panel-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="about.html">Our Story</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservation.html">Reserve</a>
+  <a href="contact.html">Visit Us</a>
+  <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+</div>
+
+<section class="page-hero" style="background-image:url('images/flatlay-coffee-bakes.png');">
+  <div class="wrap">
+    <p class="kicker">Kitchen</p>
+    <h1>The Menu</h1>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal-up">
+      <p class="kicker">A Little Bit of Everything</p>
+      <h2>Coffee, bakes &amp; plates.</h2>
+      <p>Made close to home, and best enjoyed slowly.</p>
+    </div>
+    <div class="menu-cols">
+      <div>
+        <div class="menu-cat reveal-up">
+          <h3>Coffee &amp; Drinks</h3>
+          <div class="menu-item"><div><p class="mi-name">Iced Spanish Latte</p><p class="mi-desc">Espresso, condensed milk, cold milk over ice</p></div><p class="mi-price">P38</p></div>
+          <div class="menu-item"><div><p class="mi-name">Flat White</p><p class="mi-desc">Double ristretto, steamed milk</p></div><p class="mi-price">P32</p></div>
+          <div class="menu-item"><div><p class="mi-name">Iced Matcha Latte</p><p class="mi-desc">Ceremonial-grade matcha, oat milk option</p></div><p class="mi-price">P42</p></div>
+          <div class="menu-item"><div><p class="mi-name">Filter Coffee</p><p class="mi-desc">Rotating single-origin, brewed to order</p></div><p class="mi-price">P28</p></div>
+          <div class="menu-item"><div><p class="mi-name">Pot of Tea</p><p class="mi-desc">Rooibos, English breakfast, or green</p></div><p class="mi-price">P25</p></div>
+        </div>
+        <div class="menu-cat reveal-up">
+          <h3>Fresh Bakes</h3>
+          <div class="menu-item"><div><p class="mi-name">Swedish Cardamom Bun</p><p class="mi-desc">Laminated dough, pearl sugar, fresh cardamom</p></div><p class="mi-price">P35</p></div>
+          <div class="menu-item"><div><p class="mi-name">Burnt Butter Banana Bread</p><p class="mi-desc">Brown butter, toasted walnut, warm spice</p></div><p class="mi-price">P32</p></div>
+          <div class="menu-item"><div><p class="mi-name">Oat &amp; Honey Cookie</p><p class="mi-desc">Local honey, rolled oats, sea salt</p></div><p class="mi-price">P28</p></div>
+          <div class="menu-item"><div><p class="mi-name">Classic New York Cheesecake</p><p class="mi-desc">Baked to order, seasonal fruit compote</p></div><p class="mi-price">P48</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="menu-cat reveal-up">
+          <h3>All-Day Plates</h3>
+          <div class="menu-item"><div><p class="mi-name">Baked Eggs, Tomato &amp; Herb Butter</p><p class="mi-desc">Slow-baked eggs, chilli oil, toasted sourdough</p></div><p class="mi-price">P75</p></div>
+          <div class="menu-item"><div><p class="mi-name">Avocado &amp; Feta Toast</p><p class="mi-desc">Sourdough, whipped feta, citrus, chilli flakes</p></div><p class="mi-price">P68</p></div>
+          <div class="menu-item"><div><p class="mi-name">Botswana Beef &amp; Egg Bowl</p><p class="mi-desc">Grass-fed beef, fried egg, herbed rice</p></div><p class="mi-price">P95</p></div>
+          <div class="menu-item"><div><p class="mi-name">Seasonal Salad Bowl</p><p class="mi-desc">Market vegetables, grains, citrus dressing</p></div><p class="mi-price">P62</p></div>
+          <div class="menu-item"><div><p class="mi-name">Soup of the Day</p><p class="mi-desc">Ask your server &mdash; served with sourdough</p></div><p class="mi-price">P55</p></div>
+        </div>
+        <p class="menu-note reveal-up">Menu changes with the seasons. Please let us know of any allergies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0; padding-bottom:100px;">
+  <div class="wrap" style="text-align:center;">
+    <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="tag">Homegrown. Home made. Lok'al.</span>
+    <span class="copy">&copy; 2026 Our Lok'al Kitchen &amp; Coffeehouse</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

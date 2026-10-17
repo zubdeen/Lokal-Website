@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve a Table — Our Lok'al Kitchen &amp; Coffeehouse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Our Lok'al home">
+      <span class="pre">our</span>
+      <span class="main">Lok'al</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+      <li><a href="contact.html">Visit</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-top">
+    <a class="logo" href="index.html"><span class="pre">our</span><span class="main">Lok'al</span></a>
+    <button class="panel-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="about.html">Our Story</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservation.html">Reserve</a>
+  <a href="contact.html">Visit Us</a>
+  <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+</div>
+
+<section class="page-hero" style="background-image:url('images/baked-eggs.png');">
+  <div class="wrap">
+    <p class="kicker">Book Ahead</p>
+    <h1>Reserve Your Table</h1>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div class="sec-head reveal-up" style="text-align:center; margin:0 auto 44px;">
+      <p class="kicker">Step 1</p>
+      <h2>When are you joining us?</h2>
+      <p style="margin:0 auto;">Tell us the date, time, and party size &mdash; then walk the room in 3D to pick your exact table.</p>
+    </div>
+
+    <!-- GATE FORM -->
+    <form class="res-gate reveal-up" id="gateForm">
+      <h3>Your Booking Details</h3>
+      <p class="sub">We'll only show you tables that fit your party.</p>
+      <div class="gate-row">
+        <div>
+          <label for="gDate">Date</label>
+          <input type="date" id="gDate" required>
+        </div>
+        <div>
+          <label for="gTime">Time</label>
+          <select id="gTime">
+            <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+            <option selected>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+            <option>16:00</option><option>17:00</option><option>18:00</option>
+          </select>
+        </div>
+        <div>
+          <label for="gGuests">Guests</label>
+          <select id="gGuests">
+            <option value="1">1 guest</option>
+            <option value="2" selected>2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Preview the Room</button>
+    </form>
+
+    <!-- SUMMARY BAR (shown after gate submitted) -->
+    <div class="res-summary-bar" id="resSummary" style="display:none;">
+      <span id="resSummaryText"></span>
+      <button type="button" id="resEdit">Edit details</button>
+    </div>
+
+    <!-- 3D STAGE (hidden until gate submitted) -->
+    <div class="stage-wrap" id="stageWrap">
+      <div class="stage" id="stage">
+        <div class="loading-overlay" id="loadingOverlay">Setting the room&hellip;</div>
+        <div class="stage-hint" id="stageHint">Drag to look around &middot; Scroll to zoom &middot; Tap a table to select</div>
+        <button class="stage-fullscreen" id="fsBtn" aria-label="Full screen">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#211C15" stroke-width="1.6"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        </button>
+        <div class="stage-legend">
+          <div class="dot-row"><span class="dot" style="background:#B08948"></span>Available</div>
+          <div class="dot-row"><span class="dot" style="background:#6E7F5C"></span>Selected</div>
+          <div class="dot-row"><span class="dot" style="background:#9C9488"></span>Reserved</div>
+        </div>
+
+        <div class="panel" id="panel">
+          <div class="panel-top">
+            <div>
+              <p class="table-name" id="pName">Table</p>
+              <p class="table-zone" id="pZone">Zone &middot; Seats 2</p>
+            </div>
+            <button class="panel-close" id="panelClose" aria-label="Close">&times;</button>
+          </div>
+          <p class="table-zone" id="pBooking" style="margin-top:-14px; margin-bottom:20px;"></p>
+          <div class="field">
+            <label for="rName">Name</label>
+            <input type="text" id="rName" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="rEmail">Email</label>
+            <input type="email" id="rEmail" placeholder="you@email.com">
+          </div>
+          <button class="btn btn-primary" id="confirmBtn">Confirm Reservation</button>
+          <div class="panel-msg" id="panelMsg"></div>
+        </div>
+
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="tag">Homegrown. Home made. Lok'al.</span>
+    <span class="copy">&copy; 2026 Our Lok'al Kitchen &amp; Coffeehouse</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="reservation.js?v=2"></script>
+</body>
+</html>

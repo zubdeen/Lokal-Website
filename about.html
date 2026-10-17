@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Story — Our Lok'al Kitchen &amp; Coffeehouse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Our Lok'al home">
+      <span class="pre">our</span>
+      <span class="main">Lok'al</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+      <li><a href="contact.html">Visit</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-top">
+    <a class="logo" href="index.html"><span class="pre">our</span><span class="main">Lok'al</span></a>
+    <button class="panel-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="about.html">Our Story</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservation.html">Reserve</a>
+  <a href="contact.html">Visit Us</a>
+  <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+</div>
+
+<section class="page-hero" style="background-image:url('images/brand-story.png');">
+  <div class="wrap">
+    <p class="kicker">Restaurant</p>
+    <h1>Our Story</h1>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="dict-card reveal-up">
+      <span class="quote-mark">&rdquo;</span>
+      <p class="word">our lok'al</p>
+      <p class="phon">[our loh&ndash;kal]</p>
+      <p class="pos">noun</p>
+      <p class="def">The feeling of finding your favourite table, your favourite coffee, and your favourite people &mdash; all in one place.</p>
+      <p class="see">see also: comfort, connection, good company, favourite spot</p>
+    </div>
+    <div class="story-copy reveal-up">
+      <p>We started Our Lok'al with a simple idea &mdash; that the best meals happen slowly, around a table, with people you like. Every loaf, bun, and plate here is made by hand, using ingredients grown and raised close to home.</p>
+      <p>Whether you're in for a quiet coffee before work or a long lunch with old friends, this is a place built to be lingered in. Pull up a chair. You belong here.</p>
+      <p class="tagline">Come as you are. Leave as family.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal-up">
+      <p class="kicker">From the Kitchen</p>
+      <h2>What's on the table.</h2>
+      <p>A few favourites, straight from our counter to yours.</p>
+    </div>
+    <div class="gallery-grid reveal-stagger">
+      <div class="gallery-item">
+        <img src="images/flatlay-coffee-bakes.png" alt="Iced Spanish latte, burnt butter banana bread, and a Swedish cardamom bun laid out on a table">
+        <div class="gallery-cap">Iced Spanish Latte, Banana Bread &amp; Cardamom Bun</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/pastry-spread.png" alt="A spread of iced coffee, matcha, pastries, cookies, and cheesecake">
+        <div class="gallery-cap">Fresh Bakes &amp; Iced Drinks</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/baked-eggs.png" alt="Baked eggs in tomato and herb butter with toasted sourdough">
+        <div class="gallery-cap">Baked Eggs, Tomato &amp; Herb Butter</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap crosslink" style="border:1px solid var(--line); border-radius:3px; overflow:hidden;">
+    <div class="cl-img"><img src="images/pastry-spread.png" alt="Fresh bakes at Our Lok'al"></div>
+    <div class="cl-text">
+      <p class="kicker">Hungry Yet?</p>
+      <h3>See the Full Menu</h3>
+      <p>Coffee, fresh bakes, and all-day plates &mdash; take a look at what's on offer.</p>
+      <a href="menu.html" class="btn btn-outline">View the Menu</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="tag">Homegrown. Home made. Lok'al.</span>
+    <span class="copy">&copy; 2026 Our Lok'al Kitchen &amp; Coffeehouse</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
